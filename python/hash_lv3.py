@@ -3,7 +3,7 @@
 from collections import defaultdict
 import heapq
 
-def solution2(genres, plays):
+def solution(genres, plays):
     count = defaultdict(int)
 
     type = defaultdict(list)
@@ -25,3 +25,7 @@ def solution2(genres, plays):
 
     return answer
 
+genres = ["classic", "pop", "classic", "classic", "pop"]
+plays = [500, 600, 150, 800, 2500]
+
+print(solution(genres, plays))
