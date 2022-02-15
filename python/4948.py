@@ -1,25 +1,21 @@
 ##  4948 : https://www.acmicpc.net/problem/4948
 
-from math import sqrt
+n = 123456 * 2 + 1
+
+sosu = []
+
+def prime(x):
+    for i in range(2, int(x ** 0.5) + 1):
+        if x % i == 0:
+            return False
+    return True
+
+for i in range(2, n):
+    if prime(i) == True:
+        sosu.append(i)
 
 while True:
-    n = int(input())
-    if n == 0:
+    r = int(input())
+    if r == 0:
         break
-    
-    cnt = 0
-
-    for i in range(n+1, 2*n+1):
-        if i == 1:
-            continue
-        elif i == 2:
-            cnt += 1
-            continue
-        else:
-            for j in range(2, int(sqrt(i)+1)):
-                if i % j == 0:
-                    break
-            else:
-                cnt += 1
-
-    print(cnt)
+    print(sum(map(lambda x: 1 if r < x <= 2 * r else 0, sosu)))
