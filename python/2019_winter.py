@@ -25,3 +25,5 @@ def solution(stones, k):
             right = mid - 1
     
     return answer
+
+print(solution([1,3,5,2,3,1,1], 2))

@@ -20,7 +20,6 @@ def route(h, w):
             cube[n][m] = cube[n+1][m] + cube[n][m-1]
     
     return cube[0][w-1]
-    # return cube
 
 def solution(width, height, diagonals):
     result = 0
@@ -35,3 +34,4 @@ def solution(width, height, diagonals):
 width, height = 51, 37
 diagonals = [[17,19]]
 print(solution(width, height, diagonals) % 10000019)
+print(solution(2,2,[[1,1],[2,2]]))
