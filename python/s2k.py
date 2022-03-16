@@ -3,7 +3,6 @@
 n은 1 이상 1,000 이하입니다.
 '''
 
-import numpy as np
 import copy
 
 def solution(n, clockwise):
@@ -66,4 +65,4 @@ def solution(n, clockwise):
     for a in answer:
         print(a)
 
-solution(6, False)
+solution(7, True)
