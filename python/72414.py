@@ -2,8 +2,8 @@
 
 
 
-play_time = "50:00:00"
-adv_time = "50:00:00"
+play_time = "02:00:00"
+adv_time = "99:00:00"
 logs = ["15:36:51-38:21:49", "10:14:18-15:36:51", "38:21:49-42:51:45"]
 
 
@@ -54,3 +54,6 @@ def int_to_str(time):
     time = time % 60
     s = '0' + str(time) if time < 10 else str(time)
     return h + ':' + m + ':' + s
+
+
+print(solution(play_time, adv_time, logs))
